@@ -9,16 +9,30 @@ import javax.validation.constraints.NotBlank;
 
 public class dtoEducacion {
     @NotBlank
+    private String anioE;
+    @NotBlank
     private String nombreE;
     @NotBlank
     private String descripcionE;
 
+    //constructores
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreE, String descripcionE) {
+    public dtoEducacion(String anioE, String nombreE, String descripcionE) {
+        this.anioE = anioE;
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+    }
+
+    //getters and setters
+
+    public String getAnioE() {
+        return anioE;
+    }
+
+    public void setAnioE(String anioE) {
+        this.anioE = anioE;
     }
 
     public String getNombreE() {
@@ -36,6 +50,7 @@ public class dtoEducacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+    
     
     
 }

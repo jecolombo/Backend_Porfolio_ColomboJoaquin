@@ -62,7 +62,7 @@ public class CExperiencia {
         if(sExperiencia.existsByNombreE(dtoexp.getNombreE()))
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         
-        Experiencia experiencia = new Experiencia(dtoexp.getNombreE(), dtoexp.getDescripcionE());
+        Experiencia experiencia = new Experiencia(dtoexp.getAnioE(),dtoexp.getNombreE(),dtoexp.getCargoE() ,dtoexp.getDescripcionE());
         sExperiencia.save(experiencia);
         
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);

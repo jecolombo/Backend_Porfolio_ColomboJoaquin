@@ -15,16 +15,22 @@ public class Educacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private String anioE;
     private String nombreE;
     private String descripcionE;
 
+    //constructores
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE) {
+    public Educacion(String anioE, String nombreE, String descripcionE) {
+        this.anioE = anioE;
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
+
+    
+    //getters and setters
 
     public int getId() {
         return id;
@@ -32,6 +38,14 @@ public class Educacion {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getAnioE() {
+        return anioE;
+    }
+
+    public void setAnioE(String anioE) {
+        this.anioE = anioE;
     }
 
     public String getNombreE() {
@@ -49,6 +63,7 @@ public class Educacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+    
     
     
 }
