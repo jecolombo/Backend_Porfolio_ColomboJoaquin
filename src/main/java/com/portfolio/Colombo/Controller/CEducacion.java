@@ -85,7 +85,7 @@ public class CEducacion {
         }
         
         Educacion educacion = sEducacion.getOne(id).get();
-        
+        educacion.setAnioE(dtoeducacion.getAnioE());
         educacion.setNombreE(dtoeducacion.getNombreE());
         educacion.setDescripcionE(dtoeducacion.getDescripcionE());
         

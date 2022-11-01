@@ -81,7 +81,9 @@ public class CExperiencia {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         
         Experiencia experiencia = sExperiencia.getOne(id).get();
+        experiencia.setAnioE(dtoexp.getAnioE());
         experiencia.setNombreE(dtoexp.getNombreE());
+        experiencia.setCargoE(dtoexp.getCargoE());
         experiencia.setDescripcionE((dtoexp.getDescripcionE()));
         
         sExperiencia.save(experiencia);
